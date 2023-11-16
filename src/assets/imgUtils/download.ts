@@ -4,8 +4,9 @@ const download = () => {
     const node = document.getElementsByClassName('talk-list')[0]
     // 隐藏截图的滚动条
     node.setAttribute('style', 'overflow-y:hidden')
-    const width = node.clientWidth * 2
-    const height = node.scrollHeight * 2
+    const width = node.clientWidth * 1.5
+    const height = node.scrollHeight * 1.5
+    
     if (width && height) {
         domtoimage
             .toPng(node, { width, height })
